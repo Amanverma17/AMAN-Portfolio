@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="apple-favicon.avif">
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 45px;
+    background-color: rgba(245, 245, 247, .8);
+    /* background-color: transparent; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 35px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header a{
+    text-decoration: none;
+    color: rgb(37, 35, 35);
+    font-size: 14px;
+}
+.hamburger{
+    display: none;
+}
+
+.donation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    background-color: rgba(245, 245, 247, .8);
+    font-size: 18px;
+}
+
+.donation .donation-img img{
+    /* padding: 25.5px 0; */
+    width: 45px;
+}
+
+/* .grid-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.parent {
+    height: 250vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 12px;
+    }
+    
+    .iphone16pro { grid-area: 1 / 1 / 2 / 2; }
+    .iphone16 { grid-area: 2 / 1 / 3 / 2; }
+    .watch { grid-area: 3 / 1 / 4 / 2; }
+
+.iphone16pro{
+    /* height: 585px; */
+    width: 100%;
+    background-image: url(Assest/images/xyz.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.iphone16pro .iphone16pro-content{
+    padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    row-gap: 6px;
+}
+
+.iphone16pro .iphone16pro-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.iphone16pro .iphone16pro-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.iphone16pro .iphone16pro-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+/* iphone 16 */
+
+.iphone16{
+    /* height: 585px;
+    width: 100%; */
+    background-image: url(Assest/images/iphone16-blue1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+}   
+
+.iphone16 .iphone16-content{
+    padding-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+    row-gap: 6px;
+    /* scroll-snap-type: ; */
+}
+
+.iphone16 .iphone16-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.iphone16 .iphone16-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: white;
+}
+
+.iphone16 .iphone16-content .buy:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+/* WATCH CONTAINER */
+.watch{
+    /* height: 585px; */
+    background-image: url(Assest/images/watch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* background-color: rgb(67, 102, 255); */
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+}
+
+.watch .watch-content{
+    padding-top: 5vh;
+    width: 500px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+    row-gap: 6px;
+}
+
+.watch .watch-content p{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.watch .watch-content-button .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+    font-weight: 550;
+    font-size: 15px;
+    color: black;
+}
+
+.wacth .watch-content .buy:hover{
+    background-color: white;
+    color: black;
+}
+
+/* 
+@keyframes scroll {
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+} */
+
+
+/* 
+.watch-mac{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} */
+
+.grid-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent-box {
+    height: 250vh;
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    }
+    
+    .box1 { grid-area: 1 / 1 / 2 / 2; }
+    .box2 { grid-area: 1 / 2 / 2 / 3; }
+    .box3 { grid-area: 2 / 1 / 3 / 2; }
+    .box4 { grid-area: 2 / 2 / 3 / 3; }
+    .box5 { grid-area: 3 / 1 / 4 / 2; }
+    .box6 { grid-area: 3 / 2 / 4 / 3; }
+
+.box1{
+    /* height: 595px;
+    width: 720px; */
+    background-image: url(Assest/images/promo-watch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box1 .box1-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box1 .box1-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box1 .box1-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box1 .box1-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+
+
+.box2{
+    /* height: 590px;
+    width: 720px; */
+    background-image: url(Assest/images/lap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box2 .box2-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box2 .box2-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box2 .box2-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box2 .box2-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+
+.ipad-airpod{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box3{
+    /* height: 595px;
+    width: 720px; */
+    background-image: url(Assest/images/box3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box3 .box3-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box3 .box3-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box3 .box3-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box3 .box3-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+
+
+.box4{
+    /* height: 590px;
+    width: 720px; */
+    background-image: url(Assest/images/box4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 45px;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box4 .box4-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box4 .box4-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box4 .box4-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box4 .box4-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+
+.trade-card{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box5{
+    /* height: 595px;
+    width: 720px; */
+    background-image: url(Assest/images/box5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box5 .box5-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box5 .box5-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box5 .box5-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box5 .box5-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+
+
+
+.box6{
+    /* height: 590px;
+    width: 720px; */
+    background-image: url(Assest/images/box6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 45px;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+    /* animation-range: exit ; */
+    /* background-color: rgb(67, 102, 255); */
+}
+
+.box6 .box6-content{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: black;
+    font-size: 20px;
+    row-gap: 6px;
+}
+
+.box6 .box6-content .learn-more{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(77, 77, 248);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+}
+
+.box6 .box6-content .buy{
+    width: 70px;
+    height: 40px;
+    border: 2px solid rgb(77, 77, 248);
+    border-radius: 20px;
+    background-color: transparent;
+    font-weight: 550;
+    font-size: 15px;
+    color: rgb(77, 77, 248);
+}
+
+.box6 .box6-content .buy:hover{
+    background-color: rgb(77, 77, 248);
+    color: white;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.slider {
+    width: max-content;
+    display: flex;
+    animation: slide 35s linear infinite;
+}
+
+.slider-img {
+    padding: 0 15px;
+    height: 35vh;
+}
+.slider:hover{
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* .slider:hover{
+
+    animation-duration: 40s;
+} */
+
+.content{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(245, 245, 247, .8);
+    margin-top: 10px;
+    /* animation: scroll;
+    animation-timeline: view();
+    animation-range: entry cover 40%; */
+
+}
+
+
+.content p{
+    text-align: start;
+    width: 65vw;
+    font-size: 13.5px;
+    color: rgb(41, 36, 36);
+    padding: 6px 0;
+}
+
+
+
+
+
+
+@media screen and (width<=480px) {
+    header a{
+        display: none;
+    }
+    .header-logo{
+        padding-right: 250px;
+    }
+
+    .parent{
+        height: 190vh;
+    }
+
+    .iphone16pro{
+        width: 100vw;
+        /* height: 60vh; */
+    }
+
+    .iphone16pro-content{
+        font-size: 10px;
+    }
+
+    .iphone16{
+        width: 100vw;
+        height: 60vh;
+    }
+
+   .watch{
+    width: 100vw;
+    height: 60vh;
+   }
+   .parent-box {
+    padding: 10px 0;
+    height: 550vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 25px;
+    }
+    
+    .box1 { grid-area: 1 / 1 / 2 / 2; }
+    .box2 { grid-area: 2 / 1 / 3 / 2; }
+    .box3 { grid-area: 3 / 1 / 4 / 2; }
+    .box4 { grid-area: 4 / 1 / 5 / 2; }
+    .box5 { grid-area: 5 / 1 / 6 / 2; }
+    .box6 { grid-area: 6 / 1 / 7 / 2; }
+
+    .slider-wrapper{
+    }
+
+
+    .content{
+        height: 150vh;
+        width: 100%;
+    }
+
+    .content p{
+        text-align: start;
+        width: 85vw;
+        font-size: 13.5px;
+        color: rgb(41, 36, 36);
+        padding: 6px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <i class="fa-brands fa-apple"></i>
+        </div>
+        <a href="">Store</a>
+        <a href="">mac</a>
+        <a href="">ipad</a>
+        <a href="">iphone</a>
+        <a href="">Watch</a>
+        <a href="">Vision</a>
+        <a href="">Airpod</a>
+        <a href="">TV & Home</a>
+        <a href="">Entertainment</a>
+        <a href="">Accessories</a>
+        <a href="">Support</a>
+        <div class="header-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="header-bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="donation">
+        <div class="donation-img">
+            <img src="Assest/images/header-hospital.jpg" alt="">
+        </div>
+        <a href="">Donate to 2025 Southern California wildfires</a>
+    </div>
+
+
+    <div class="grid-1">
+        <div class="parent">
+
+
+            <div class="iphone16pro">
+                <div class="iphone16pro-content">
+                    <h1>iphone16 Pro</h1>
+                    <p>Hello, Apple Intelligence</p>
+                    <div class="iphone16pro-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="iphone16">
+                <div class="iphone16-content">
+                    <h1>iphone16</h1>
+                    <p>Hello, Apple Intelligence</p>
+                    <div class="iphone16-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="watch">
+                <div class="watch-content">
+                    <h1><i class="fa-brands fa-apple"></i>watch</h1>
+                    <p>United by rhythm.Discover the new Blaack Unity watch band and face</p>
+                    <div class="watch-content-button">
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="parent-box">
+
+            <div class="box1">
+                <div class="box1-content">
+                    <h1><i class="fa-brands fa-apple"></i>WATCH</h1>
+                    <p>Thinstant classic</p>
+                    <div class="box1-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="box2-content">
+                    <h1>MacBook Air</h1>
+                    <p>Lean.Mean.M3 machine</p>
+                    <div class="box2-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="box3">
+                <div class="box3-content">
+                    <h1>iPad Pro</h1>
+                    <p>Unbelievably thin.Incredibly powerful</p>
+                    <div class="box3-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="box4-content">
+                    <h1>AirPods Pro 2</h1>
+                    <p>Now with a hearing aid feature.<sup>1</sup></p>
+                    <div class="box4-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box5">
+                <div class="box5-content">
+                    <h1>iphone16</h1>
+                    <p>Hello, Apple Intelligence</p>
+                    <div class="box5-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box6">
+                <div class="box6-content">
+                    <h1>iphone16</h1>
+                    <p>Hello, Apple Intelligence</p>
+                    <div class="box6-content-button">
+                        <a href=""><button class="learn-more">
+                                Learn More
+                            </button></a>
+                        <a href="">
+                            <button class="buy">Buy</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-wrapper">
+        <div class="slider">
+            <img src="Assest/images/slider-1.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-2.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-3.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-4.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-5.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-6.jpg" alt="" class="slider-img">
+
+            <img src="Assest/images/slider-1.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-2.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-3.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-4.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-5.jpg" alt="" class="slider-img">
+            <img src="Assest/images/slider-6.jpg" alt="" class="slider-img">
+        </div>
+    </div>
+
+
+    <div class="content">
+        <p>1. Hearing Aid and Hearing Test: The Hearing Aid feature has received FDA authorization. The Hearing Test and
+            Hearing Aid features are supported on AirPods Pro 2 with the latest firmware paired with a compatible iPhone
+            or iPad with iOS 18 or iPadOS 18 and later and are intended for people 18 years old or older. The Hearing
+            Aid feature is also supported on a compatible Mac with macOS Sequoia and later. It is intended for people
+            with perceived mild to moderate hearing loss.</p>
+        <p>Hearing Protection: The Hearing Protection feature works with AirPods Pro 2 with the latest firmware when
+            paired with a compatible iPhone, iPad, or Mac with iOS 18, iPadOS 18, or macOS Sequoia and later. Feature is
+            only available in the U.S. and Canada. See support.apple.com/120850 for total attenuation and more
+            information. The Hearing Protection feature is not suitable for protection against extremely loud impulse
+            sounds, such as gunfire, fireworks, or jackhammers, or against sustained sounds louder than 110 dBA.</p>
+        <p>2. Trade‑in values will vary based on the condition, year, and configuration of your eligible trade‑in
+            device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to
+            trade in for credit or for an Apple Gift Card. Trade‑in value may be applied toward qualifying new device
+            purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device
+            matching the description provided when estimate was made. Sales tax may be assessed on full value of a new
+            device purchase. In‑store trade‑in requires presentation of a valid photo ID (local law may require saving
+            this information). Offer may not be available in all stores, and may vary between in‑store and online
+            trade‑in. Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to
+            refuse, cancel, or limit quantity of any trade‑in transaction for any reason. More details are available
+            from Apple’s trade-in partner for trade‑in and recycling of eligible devices. Restrictions and limitations
+            may apply.</p>
+        <p>To access and use all Apple Card features and products available only to Apple Card users, you must add Apple
+            Card to Wallet on an iPhone or iPad that supports and has the latest version of iOS or iPadOS. Apple Card is
+            subject to credit approval, available only for qualifying applicants in the United States, and issued by
+            Goldman Sachs Bank USA, Salt Lake City Branch.</p>
+        <p>If you reside in the U.S. territories, please call Goldman Sachs at 877-255-5923 with questions about Apple
+            Card.</p>
+        <p>Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218.</p>
+        <p>Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, iPhone 15 Pro Max, iPad mini
+            (A17 Pro), and iPad and Mac models with M1 and later, with Siri and device language set to English
+            (Australia, Canada, Ireland, New Zealand, South Africa, UK, or U.S.), as part of an iOS 18, iPadOS 18, and
+            macOS Sequoia software update. Additional features and languages will be available in April, with more
+            languages coming over the course of the year. Languages supported in 2025 include Chinese, English (India,
+            Singapore), French, German, Italian, Japanese, Korean, Portuguese, Spanish, and Vietnamese.</p>
+        <p>A subscription is required for Apple Arcade, Apple Fitness+, Apple Music, and Apple TV+.</p>
+        <p>Features are subject to change. Some features, applications, and services may not be available in all regions
+            or all languages.
+        </p>
+        <hr>
+    </div>
+
+    <video id="introVideo" width="100%" autoplay muted playsinline>
+        <source src="Assest/images/vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let video = document.getElementById("introVideo");
+    
+            // Check if video has already played in this session
+            if (sessionStorage.getItem("played")) {
+                video.style.display = "none"; // Hide video
+            } else {
+                video.play(); // Ensure autoplay works
+                video.onended = function () {
+                    video.style.display = "none"; // Hide after playing
+                    sessionStorage.setItem("played", "true"); // Save play status
+                };
+            }
+        });
+    </script>
+   
+    
+</body>
+
+</html>
