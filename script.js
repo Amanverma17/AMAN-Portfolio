@@ -1,4 +1,3 @@
-// Hamburger Side Nav Functionality (robust, mobile only)
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger-menu');
   const sideNav = document.getElementById('side-nav');
@@ -24,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = '';
   }
 
-  
-
   function toggleSideNav() {
     if (sideNav.classList.contains('open')) {
       closeSideNav();
@@ -38,44 +35,54 @@ document.addEventListener('DOMContentLoaded', function() {
     e.stopPropagation();
     toggleSideNav();
   });
+
+  
   overlay.addEventListener('click', closeSideNav);
   // Close on nav link click (mobile)
-  sideNav.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
-        // Special scroll logic for #portfolio (with offset)
-        if (href === "#portfolio" && portfolioSection) {
-          const header = document.querySelector('header');
-          const headerHeight = header ? header.offsetHeight : 0;
-          const extraOffset = 150;
-          const rect = portfolioSection.getBoundingClientRect();
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          const targetY = rect.top + scrollTop - headerHeight + extraOffset;
-          window.scrollTo({ top: targetY, behavior: "smooth" });
-        } else {
-          // Default smooth scroll for other sections
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
-      }
-      closeSideNav();
-    });
-  });
+
+
+//   sideNav.querySelectorAll('a').forEach(function(link) {
+//     link.addEventListener('click', function(e) {
+//       const href = this.getAttribute('href');
+//       if (href && href.startsWith('#')) {
+//         e.preventDefault();
+//         // Special scroll logic for #portfolio (with offset)
+//         if (href === "#portfolio" && portfolioSection) {
+//           const header = document.querySelector('header');
+//           const headerHeight = header ? header.offsetHeight : 0;
+//           const extraOffset = 150;
+//           const rect = portfolioSection.getBoundingClientRect();
+//           const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//           const targetY = rect.top + scrollTop - headerHeight + extraOffset;
+//           window.scrollTo({ top: targetY, behavior: "smooth" });
+//         } else {
+//           // Default smooth scroll for other sections
+//           const target = document.querySelector(href);
+//           if (target) {
+//             target.scrollIntoView({ behavior: 'smooth' });
+//           }
+//         }
+//       }
+//       closeSideNav();
+//     });
+//   });
+
+
+
   // Close on resize to desktop
   window.addEventListener('resize', function() {
     if (!isMobile()) {
       closeSideNav();
     }
   });
+
   // Optional: close on ESC key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeSideNav();
   });
 });
+
+
 // Hamburger menu toggle for mobile navigation
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -102,16 +109,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close nav when a link is clicked (mobile only)
-        nav.querySelectorAll('a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    nav.classList.remove('show');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
+        // nav.querySelectorAll('a').forEach(function(link) {
+        //     link.addEventListener('click', function() {
+        //         if (window.innerWidth <= 768) {
+        //             nav.classList.remove('show');
+        //             hamburger.setAttribute('aria-expanded', 'false');
+        //         }
+        //     });
+        // });
     }
 });
+
+
+
 // Smooth scroll to top when clicking header nav link HOME
 document.querySelectorAll('nav a[href="#home"]').forEach(function(homeNavLink) {
     homeNavLink.addEventListener('click', function(e) {
@@ -119,6 +129,8 @@ document.querySelectorAll('nav a[href="#home"]').forEach(function(homeNavLink) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
+
+
 // Smooth scroll to portfolio section with offset when clicking header nav link
 document.querySelectorAll('nav a[href="#portfolio"]').forEach(function(portfolioNavLink) {
     portfolioNavLink.addEventListener('click', function(e) {
@@ -134,6 +146,8 @@ document.querySelectorAll('nav a[href="#portfolio"]').forEach(function(portfolio
         }
     });
 });
+
+
 // Activate tech stack tab/section when clicking any .tech_arrow
 function handleTechArrowClick(e) {
     e.preventDefault();
@@ -171,6 +185,8 @@ function handleTechArrowClick(e) {
 document.querySelectorAll('.tech_arrow').forEach(function(techArrow) {
     techArrow.addEventListener('click', handleTechArrowClick);
 });
+
+
 // Activate certificate tab/section when clicking any .certi_arrow
 function handleCertiArrowClick(e) {
     e.preventDefault();
@@ -208,6 +224,8 @@ function handleCertiArrowClick(e) {
 document.querySelectorAll('.certi_arrow').forEach(function(certiArrow) {
     certiArrow.addEventListener('click', handleCertiArrowClick);
 });
+
+
 // Activate project tab/section when clicking any .project_arrow or #about-achievement-arrow
 function handleProjectArrowClick(e) {
     e.preventDefault();

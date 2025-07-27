@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AMAN's Portfolio</title>
     <link rel="stylesheet" href="stylesheet.css">
 
     <!-- Font Awesome CDN link -->
@@ -22,7 +22,10 @@
 <body>
 
     <header>
-        <h1>AMAN</h1>
+
+        <!-- <h1>AMAN</h1> -->
+        <img src="asset/header-logooo.jpeg" alt="">
+
         <!-- Hamburger button (already present) -->
         <button class="hamburger" id="hamburger-menu" aria-label="Open navigation" aria-expanded="false">
             <span></span>
@@ -37,12 +40,26 @@
         </nav>
     </header>
 
+
+    <!-- Overlay for side nav (already present) -->
+    <div id="side-nav-overlay"></div>
+    <!-- Side nav for mobile (hamburger content) -->
+
+    <nav id="side-nav" class="side-nav">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+
+
     <div class="home" id="home">
 
         <div class="home-content">
-            <h1 id="name">Hi, I'm Aman</h1>
-            <h1 id="role">SOFTWARE </h1>
-            <h1 id="role2">DEVELOPER</h1>
+            <h1 id="name">Hi, I'm <span>Aman</span></h1>
+            <h1 id="role" class="domain">SOFTWARE </h1>
+            <h1 id="role2" class="domain">DEVELOPER</h1>
             <!-- <h1>DEVELOPER</h1> -->
 
             <h3>Code. Build. Deploy.</h3>
@@ -88,7 +105,7 @@
 
         <div class="about-content">
             <div class="about-content-content">
-                <h1>HELLO I'AM</h1>
+                <h1>HELLO I'am</h1>
                 <H1>AMAN VERMA </H1>
                 <p>Hi, I'm Aman — a passionate B.Tech student on a journey to become a full-stack web developer. I'm
                     constantly exploring the world of modern web technologies. With every line of code, I'm building not
@@ -119,7 +136,7 @@
                     </div>
                     <div class="achievement-content-logo">
                         <i class="fa-solid fa-arrow-up-right-from-square 
-                        " id="about-achievement-arrow" ></i>
+                        " id="about-achievement-arrow"></i>
 
                     </div>
                 </div>
@@ -200,7 +217,7 @@
                 <p>Built a responsive Apple homepage clone using HTML, CSS, and JavaScript with a clean layout and
                     smooth interactions.</p>
                 <div class="content">
-                    <button>Live Demo</button>
+                    <a href=""><button>Live Demo</button></a>
                     <button>Details <i class="fa-solid fa-arrow-up-right-from-square"></i> </button>
                 </div>
             </div>
@@ -210,7 +227,7 @@
                 <p>“Project under development – currently working on key features and UI enhancements.
                     Stay tuned for the final version showcasing full functionality and design.”</p>
                 <div class="content">
-                    <button>Live Demo</button>
+                    <a href="#"><button>Live Demo</button></a>
                     <button>Details <i class="fa-solid fa-arrow-up-right-from-square"></i> </button>
                 </div>
             </div>
@@ -220,7 +237,7 @@
                 <p>P“Project under development – currently working on key features and UI enhancements.
                     Stay tuned for the final version showcasing full functionality and design.”</p>
                 <div class="content">
-                    <button>Live Demo</button>
+                    <a href="#"><button>Live Demo</button></a>
                     <button>Details <i class="fa-solid fa-arrow-up-right-from-square"></i> </button>
                 </div>
             </div>
@@ -278,9 +295,6 @@
 
 
     </div>
-
-
-
 
 
 
@@ -349,17 +363,6 @@
 
 
     </div>
-
-    <!-- Overlay for side nav (already present) -->
-    <div id="side-nav-overlay"></div>
-    <!-- Side nav for mobile (hamburger content) -->
-     
-    <nav id="side-nav" class="side-nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#portfolio">PORTFOLIO</a>    
-        <a href="#contact">CONTACT</a>
-    </nav>
 
 
     <script src="script.js"></script>
