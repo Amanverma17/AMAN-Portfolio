@@ -1,3 +1,14 @@
+// Scroll to contact section when the first .about-btn > button is clicked
+document.addEventListener('DOMContentLoaded', function() {
+  var aboutBtn = document.querySelector('.about-btn > button');
+  var contactSection = document.getElementById('contact');
+  if (aboutBtn && contactSection) {
+    aboutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+});
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger-menu');
   const sideNav = document.getElementById('side-nav');
@@ -380,6 +391,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const homeProjectBtn = document.getElementById("home-project-btn");
 const portfolioSection = document.querySelector(".portfolio");
+
+// Scroll to portfolio and select certificate tab when #abt-achievement is clicked
+const abtAchievementBtn = document.getElementById('abt-achievement');
+if (abtAchievementBtn && portfolioSection) {
+    abtAchievementBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Scroll to portfolio section
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const extraOffset = 150;
+        const rect = portfolioSection.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const targetY = rect.top + scrollTop - headerHeight + extraOffset;
+        window.scrollTo({ top: targetY, behavior: "smooth" });
+        // Select certificate tab
+        showPortfolioTab('certificate');
+    });
+}
 
 
 if (homeProjectBtn && portfolioSection) {

@@ -1218,7 +1218,7 @@ header.header-visible {
   }
 
   .about-btn button {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.7em 1.2em;
     border-radius: 0.3rem;
     margin-right: 10px;
@@ -1519,5 +1519,8 @@ header.header-visible {
     background-color: red;
     width: max-content;
 
+    /* button:hover {
+      all: unset !important;
+    } */
   }
 }
